@@ -9,8 +9,17 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from functools import wraps
 import os
+import sys
+
+# Ensure current script directory is in sys.path for backend imports
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from datetime import datetime, timedelta
-from db_connect import execute_query, get_db_connection, close_connection
+try:
+    from db_connect import execute_query, get_db_connection, close_connection
+except ImportError:
+    from backend.db_connect import execute_query, get_db_connection, close_connection
+
 
 # =====================================================
 # APP CONFIGURATION
