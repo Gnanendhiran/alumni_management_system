@@ -53,9 +53,9 @@ Create a `.env` file:
 ```
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
+DB_PASSWORD=root
 DB_NAME=alumni_sync
-SECRET_KEY=your-secret-key
+SECRET_KEY=mysecret123	
 ```
 
 ```bash
