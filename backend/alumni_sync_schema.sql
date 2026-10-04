@@ -1358,19 +1358,22 @@ INSERT INTO institution_info (name, abbreviation, description, email) VALUES
 INSERT INTO about_page (page_title, hero_subtitle, main_content, status, is_current, created_by) VALUES
 ('About Alumni Sync', 'Connecting graduates, building futures', 'Welcome to Alumni Sync - your gateway to staying connected with your alma mater and fellow graduates.', 'published', 1, NULL);
 
--- Insert sample campuses
-INSERT INTO campuses (name, code) VALUES
-('Main Campus', 'MAIN'),
-('Downtown Campus', 'DTN'),
-('North Campus', 'NORTH');
+-- Insert sample campuses (CEG, MIT, ACTech, SAP)
+INSERT INTO campuses (name, code, address) VALUES
+('College of Engineering, Guindy (CEG)', 'CEG', 'Sardar Patel Road, Guindy, Chennai, Tamil Nadu'),
+('Madras Institute of Technology (MIT)', 'MIT', 'MIT Road, Chromepet, Chennai, Tamil Nadu'),
+('Alagappa Chettiar College of Technology (ACTech)', 'ACTECH', 'Guindy Campus, Anna University, Chennai'),
+('School of Architecture and Planning (SAP)', 'SAP', 'Anna University Campus, Guindy, Chennai');
 
 -- Insert sample degrees
 INSERT INTO degrees (name, abbreviation, level) VALUES
-('Bachelor of Science in Computer Science', 'BSc CS', 'bachelor'),
-('Bachelor of Business Administration', 'BBA', 'bachelor'),
-('Master of Business Administration', 'MBA', 'master'),
-('Master of Science in Information Technology', 'MSc IT', 'master'),
-('Doctor of Philosophy', 'PhD', 'phd');
+('B.E. Computer Science and Engineering', 'CSE', 'bachelor'),
+('B.Tech Information Technology', 'IT', 'bachelor'),
+('B.E. Electronics and Communication Engineering', 'ECE', 'bachelor'),
+('B.Tech Artificial Intelligence and Data Science', 'AI & DS', 'bachelor'),
+('B.E. Electrical and Electronics Engineering', 'EEE', 'bachelor'),
+('M.E. Software Engineering', 'SE', 'master');
+
 
 
 
