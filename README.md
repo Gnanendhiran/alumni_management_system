@@ -86,6 +86,15 @@ AlumniSync/
     └── Alumni_Sync_Project_Report.pdf   # Project report + ER diagram
 ```
 
+ Alumni Demo Account
+Email / Username: alumni@example.com
+Password: user123
+Role: Alumni (John Doe - Software Engineer at Google)
+🎓 2. Student (Junior) Demo Account
+Email / Username: student@example.com
+Password: user123
+Role: Student (Jane Smith - CSE Student)
+
 ## 👨‍💻 Author
 
 **Gnanendhiran V** — [GitHub](https://github.com/Gnanendhiran)
