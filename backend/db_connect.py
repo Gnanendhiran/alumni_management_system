@@ -57,22 +57,24 @@ def execute_query(query, params=None, fetch=True):
     """
     connection = get_db_connection()
     if not connection:
-        return None
+        return [] if fetch else None
     
+    cursor = None
     try:
         cursor = connection.cursor(dictionary=True)
         cursor.execute(query, params or ())
         
         if fetch:
             result = cursor.fetchall()
-            return result
+            return result if result is not None else []
         else:
             connection.commit()
             return cursor.lastrowid if cursor.lastrowid else cursor.rowcount
     except Error as e:
         print(f"Database error: {e}")
-        return None
+        return [] if fetch else None
     finally:
         if cursor:
             cursor.close()
         close_connection(connection)
+
